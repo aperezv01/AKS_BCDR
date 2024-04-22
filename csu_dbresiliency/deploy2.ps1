@@ -10,4 +10,4 @@ $storageaccountname = "storagecsu"
      
 Write-host "Creating Functions and Frontdoor"
 Register-AzResourceProvider -ProviderNamespace Microsoft.Cdn
-New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile ./bicep/functions_fdv2.bicep -failoverGroupName $failoverGroupName -databaseName $databaseName -adminLogin $adminLogin -contra $password
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile ./bicep/functions_fdv2.bicep -databaseName $databaseName -adminLogin $adminLogin -contra $password
